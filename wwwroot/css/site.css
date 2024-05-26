@@ -50,11 +50,23 @@ nav .container{
     width: 66.66666%;
 }
 
-.carousel-item-extra {
-    background-repeat: no-repeat;
+.carousel-item {
     height: 600px;
     background-position: center;
-    background-clip: content-box;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-inner {
+    display: flex;
+    overflow: hidden;
+}
+
+.card {
+    margin: 0 15px;
 }
 
 .full-width {

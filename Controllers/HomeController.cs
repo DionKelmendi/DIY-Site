@@ -18,8 +18,13 @@ namespace DIY_Site.Controllers
 
         public IActionResult Index()
         {
-            var categories = _db.Categories.ToList(); 
-            return View(categories); 
+            var model = new IndexViewModel
+            {
+                Categories = _db.Categories.ToList(),
+                Projects = _db.Projects.ToList()
+            };
+
+            return View(model);
         }
 
         public IActionResult Privacy()
