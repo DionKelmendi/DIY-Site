@@ -1,5 +1,11 @@
+* {
+    font-family: "Merriweather Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -14,5 +20,22 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+.logo-font {
+    font-family: "Edu TAS Beginner", cursive !important;
+    font-optical-sizing: auto !important;
+    font-style: normal !important;
+}
+
+nav .container{
+    padding: 0px;
+}
+
+@media only screen and (max-width: 575px){
+    nav .container {
+        padding-left: 11px;
+        padding-right: 11px;
+    }
 }
