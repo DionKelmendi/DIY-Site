@@ -1,21 +1,25 @@
 ﻿using System.Diagnostics;
 using DIY_Site.Models;
+using DIY_Site.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace DIY_Site.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ApplicationDbContext _db; 
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext db)
         {
             _logger = logger;
+            _db = db; 
         }
 
         public IActionResult Index()
         {
-            return View();
+            var categories = _db.Categories.ToList(); 
+            return View(categories); 
         }
 
         public IActionResult Privacy()

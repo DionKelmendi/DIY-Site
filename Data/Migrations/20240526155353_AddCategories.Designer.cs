@@ -4,6 +4,7 @@ using DIY_Site.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DIY_Site.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240526155353_AddCategories")]
+    partial class AddCategories
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -22,7 +24,7 @@ namespace DIY_Site.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("DIY_Site.Models.Category", b =>
+            modelBuilder.Entity("DIY_Site.Models.Categories", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,77 +32,12 @@ namespace DIY_Site.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<string>("Icon")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Icon = "fa-house",
-                            Name = "Home Improvement"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Icon = "fa-seedling",
-                            Name = "Gardening"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Icon = "fa-plug",
-                            Name = "Electronics"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Icon = "fa-pen-ruler",
-                            Name = "Crafts"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Icon = "fa-car",
-                            Name = "Automotive"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Icon = "fa-toolbox",
-                            Name = "DIY Tools"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Icon = "fa-paintbrush",
-                            Name = "Painting & Decorating"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Icon = "fa-toiler",
-                            Name = "Plumbing"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Icon = "fa-tree",
-                            Name = "Woodworking"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Icon = "fa-lightbulb",
-                            Name = "Lighting"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

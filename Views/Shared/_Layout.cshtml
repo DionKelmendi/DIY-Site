@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3 py-4">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow py-4">
             <div class="container">
                 <a class="navbar-brand text-white logo-font" style="font-size: 24px" asp-area="" asp-controller="Home" asp-action="Index">Craftify</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -35,12 +35,12 @@
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted py-4 bg-primary-subtle">
         <div class="container">
             &copy; 2024 - Craftify - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
@@ -48,6 +48,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/f4fb5010ea.js" crossorigin="anonymous"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
