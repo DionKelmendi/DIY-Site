@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-DIY_Site-8ad798fc-6ee8-4563-9e82-b5e036f42ee5</UserSecretsId>
+    <UserSecretsId>aspnet-DIY_Site-57341d22-fc2e-4d38-bd63-bacef6974cc1</UserSecretsId>
     <RootNamespace>DIY_Site</RootNamespace>
   </PropertyGroup>
 
