@@ -20,7 +20,7 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" >
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1 align-items-center">
                         <li class="nav-item">
                             <a class="nav-link text-white font-weight-normal h1 mb-0" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -50,6 +50,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://kit.fontawesome.com/f4fb5010ea.js" crossorigin="anonymous"></script>
+    <script src="~/js/mouse-trail.js"></script> <!-- This is where your mouse trail script will be loaded -->
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

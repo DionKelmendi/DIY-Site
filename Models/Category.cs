@@ -8,5 +8,7 @@ namespace DIY_Site.Models
         public int Id { get; set; }
         public string? Name { get; set; }
         public string? Icon { get; set; }
+        public List<Project> Projects { get; set; } = new List<Project>();
+
     }
 }
