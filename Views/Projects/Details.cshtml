@@ -6,27 +6,31 @@
 
 <div class="bg-light full-width py-5">
 <section class="container-1200px">
-        <div class="flex"><a class="text-dark text-decoration-none bg-secondary-subtle p-2 hoverable" asp-action="Index" asp-controller="Home">Home</a> > <a class="text-dark text-decoration-none bg-secondary-subtle p-2 hoverable" href="#"> @Model.Project.Category.Name </a> > @Model.Project.Name</div>
+        <div class="flex"><a class="text-dark text-decoration-none bg-secondary-subtle p-2 hoverable" asp-action="Index" asp-controller="Home">Home</a> > <a class="text-dark text-decoration-none bg-secondary-subtle p-2 hoverable" asp-controller="Categories" asp-action="Details" asp-route-id="@Model.Project.CategoryId"> @Model.Project.Category.Name </a> > @Model.Project.Name</div>
     <hr />
 
     <div>
             <h2 class="px-3">@Model?.Project.Name</h2>
             <hr />
-        <div class="flex">
+        <div class="d-flex">
                 <video width="800" height="480" controls>
                     <source src="movie.mp4" type="video/mp4">
                 </video>
+
+                <div class="p-3 bg-secondary w-100">
+                    <h2 class="">@Model?.Project.Name</h2>
+                    <hr />
+                    <h4>Supplies Needed</h4>
+                    <ul>
+                        @foreach (var supply in Model?.Supplies)
+                        {
+                            <li>@supply?.Name</li>
+                        }
+                    </ul>
+                </div>
             </div>
             <div class="bg-secondary-subtle p-3">
                 <p>@Model?.Project.Description</p>
-
-                <h4>Supplies Needed</h4>
-                <ul>
-                    @foreach (var supply in Model?.Supplies)
-                    {
-                        <li>@supply?.Name</li>
-                    }
-                </ul>
 
                 @{
                     var nextId = Model?.Project.Id + 1;
@@ -49,9 +53,8 @@
                         prevId = 25;
                     }
                 }
-
-                <a asp-action="Details" asp-route-id="@prevId">Go Back</a> |
-                <a asp-action="Details" asp-route-id="@nextId">View Next</a>
+                <a asp-action="Details" asp-route-id="@prevId" class="btn btn-primary text-light mt-3">Go Back</a> 
+                <a asp-action="Details" asp-route-id="@nextId" class="btn btn-primary text-light ms-3 mt-3">View Next</a>
             </div>
     </div>
 </section>

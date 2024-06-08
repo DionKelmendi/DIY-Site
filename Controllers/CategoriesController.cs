@@ -43,7 +43,13 @@ namespace DIY_Site.Controllers
                 return NotFound();
             }
 
-            return View(category);
+            var viewModel = new CategoryDetailsViewModel
+            {
+                Category = category,
+                Projects = category.Projects
+            };
+
+            return View(viewModel);
         }
 
         // GET: Categories/Create
