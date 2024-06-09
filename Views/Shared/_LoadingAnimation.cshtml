@@ -1,4 +1,7 @@
-﻿<div class="position-fixed min-vw-100 min-vh-100 z-3">
+﻿<div id="animation-div" class="position-fixed min-vw-100 min-vh-100 z-3 bg-dark" style="transition: 0.3s all ease-in">
+
+    <h1 class="navbar-brand logo-font text-primary" style="font-size: 40px; text-align:center; margin-top: 100px;" asp-area="" asp-controller="Home" asp-action="Index">Craftify</h1>
+
     <div class="half" id="top">
         <div id="cut">
             <div id="scissors">
@@ -52,7 +55,7 @@
         #scissors:after {
             width: 15px;
             height: 65px;
-            background: cornflowerblue;
+            background: #eb6864;
             top: 68px;
             left: -8px;
             opacity: 0;
@@ -66,7 +69,7 @@
         #scissors:before {
             width: 30px;
             height: 12px;
-            background: cornflowerblue;
+            background: #eb6864;
             top: 95px;
             opacity: 0;
             animation-name: opac;
@@ -105,7 +108,7 @@
 
     .hole {
         position: absolute;
-        background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 45%, cornflowerblue 47%, cornflowerblue 100%);
+        background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 45%, #eb6864 47%, #eb6864 100%);
         width: 90px;
         height: 90px;
         border-radius: 100px;
@@ -305,12 +308,13 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var elements = document.querySelectorAll("#scissors, #top, #bottom, #cut");
-
-        elements.forEach(function (el) {
-            el.addEventListener("animationend", function () {
-                el.classList.add("hidden");
+        var top = document.querySelector("#top");
+        var animationDiv = document.querySelector("#animation-div");
+            top.addEventListener("animationend", function () {
+            animationDiv.style.opacity = 0;
+            setTimeout(function () {
+                animationDiv.classList.add("hidden");
+            }, 300);
             });
-        });
     });
 </script>

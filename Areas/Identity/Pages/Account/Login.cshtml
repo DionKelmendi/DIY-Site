@@ -5,13 +5,14 @@
     ViewData["Title"] = "Log in";
 }
 
-<h1>@ViewData["Title"]</h1>
-<div class="row">
-    <div class="col-md-4">
+<div class="row justify-content-center">
+        <div class="col-md-6 gap-5 my-5">
+        <h1 class="mb-5">@ViewData["Title"]</h1>
+
         <section>
-            <form id="account" method="post">
-                <h2>Use a local account to log in.</h2>
-                <hr />
+            <form id="account" method="post" class="d-flex gap-2 flex-column border rounded p-3">
+                <div id="slideshow-container" style="width: 100%; height: 100px;"></div>
+                
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-floating">
                     <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
@@ -36,9 +37,6 @@
                 </div>
                 <div>
                     <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
                         <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
                     </p>
                 </div>
@@ -49,4 +47,47 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const app = new PIXI.Application({
+                width: document.getElementById('slideshow-container').clientWidth,
+                height: 100,
+                backgroundColor: 0xeb6864
+            });
+            document.getElementById('slideshow-container').appendChild(app.view);
+
+            const slides = [
+                'Welcome back to Craftify!',
+                'Log in to access your account.',
+                'Become part of our community.'
+            ];
+
+            let currentSlide = 0;
+            const textStyle = new PIXI.TextStyle({
+                fontFamily: 'Arial',
+                fontSize: 36,
+                fill: '#ffffff',
+                align: 'center'
+            });
+
+            const slideTexts = slides.map((text) => new PIXI.Text(text, textStyle));
+
+            slideTexts.forEach((slideText, index) => {
+                slideText.anchor.set(0.5);
+                slideText.x = app.screen.width / 2;
+                slideText.y = app.screen.height / 2;
+                slideText.visible = index === currentSlide;
+                app.stage.addChild(slideText);
+            });
+
+            function nextSlide() {
+                slideTexts[currentSlide].visible = false;
+                currentSlide = (currentSlide + 1) % slideTexts.length;
+                slideTexts[currentSlide].visible = true;
+            }
+
+            setInterval(nextSlide, 3000);
+        });
+    </script>
 }

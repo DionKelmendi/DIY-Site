@@ -11,7 +11,7 @@ app.renderer.resize(window.innerWidth, window.innerHeight);
 app.renderer.view.style.position = "fixed";
 app.renderer.view.style.top = "0";
 app.renderer.view.style.left = "0";
-app.renderer.view.style.pointerEvents = "none";  // Ensure it doesn't block interactions
+app.renderer.view.style.pointerEvents = "none"; 
 
 document.body.appendChild(app.view);
 
