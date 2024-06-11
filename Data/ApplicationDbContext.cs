@@ -34,216 +34,216 @@ namespace DIY_Site.Data
                 {
                     Id = 1,
                     Name = "Basement Renovation",
-                    ThumbnailURL = "https://example.com/thumbnails/basement.jpg",
+                    ThumbnailURL = "t1.webp",
                     Description = "Complete guide to renovating your basement.",
-                    VideoURL = "https://example.com/videos/basement.mp4",
+                    VideoURL = "v1.mp4",
                     CategoryId = 1 // Home Improvement
                 },
                 new Project
                 {
                     Id = 2,
                     Name = "Garden Bed Installation",
-                    ThumbnailURL = "https://example.com/thumbnails/garden.jpg",
+                    ThumbnailURL = "t2.webp",
                     Description = "Creating a raised garden bed for your backyard.",
-                    VideoURL = "https://example.com/videos/garden.mp4",
+                    VideoURL = "v2.mp4",
                     CategoryId = 2 // Gardening
                 },
                 new Project
                 {
                     Id = 4,
                     Name = "Smartphone Repair",
-                    ThumbnailURL = "https://example.com/thumbnails/smartphone-repair.jpg",
+                    ThumbnailURL = "t4.webp",
                     Description = "Step-by-step guide to replacing a broken smartphone screen.",
-                    VideoURL = "https://example.com/videos/smartphone-repair.mp4",
+                    VideoURL = "v4.mp4",
                     CategoryId = 3 // Electronics
                 },
                 new Project
                 {
                     Id = 5,
                     Name = "Vehicle Oil Change",
-                    ThumbnailURL = "https://example.com/thumbnails/oil-change.jpg",
+                    ThumbnailURL = "t5.webp",
                     Description = "Learn how to change the oil in your vehicle to save on maintenance costs.",
-                    VideoURL = "https://example.com/videos/oil-change.mp4",
+                    VideoURL = "v5.mp4",
                     CategoryId = 5 // Automotive
                 },
                 new Project
                 {
                     Id = 6,
                     Name = "Wooden Coffee Table",
-                    ThumbnailURL = "https://example.com/thumbnails/coffee-table.jpg",
+                    ThumbnailURL = "t6.webp",
                     Description = "Craft a stylish wooden coffee table with minimal tools.",
-                    VideoURL = "https://example.com/videos/coffee-table.mp4",
+                    VideoURL = "v6.mp4",
                     CategoryId = 6 // Woodworking
                 },
                 new Project
                 {
                     Id = 7,
                     Name = "Pipe Leaks Fix",
-                    ThumbnailURL = "https://example.com/thumbnails/pipe-leak.jpg",
+                    ThumbnailURL = "t7.webp",
                     Description = "Simple techniques to fix leaks in household plumbing.",
-                    VideoURL = "https://example.com/videos/pipe-leak.mp4",
+                    VideoURL = "v7.mp4",
                     CategoryId = 1 // Home Improvement
                 },
                 new Project
                 {
                     Id = 8,
                     Name = "Wall Painting Techniques",
-                    ThumbnailURL = "https://example.com/thumbnails/wall-painting.jpg",
+                    ThumbnailURL = "t8.webp",
                     Description = "Explore different techniques for painting walls to refresh your home.",
-                    VideoURL = "https://example.com/videos/wall-painting.mp4",
+                    VideoURL = "v8.mp4",
                     CategoryId = 1 // Home Improvement
                 },
                 new Project
                 {
                     Id = 9,
                     Name = "Custom Tool Organizer",
-                    ThumbnailURL = "https://example.com/thumbnails/tool-organizer.jpg",
+                    ThumbnailURL = "t9.webp",
                     Description = "Create an organizer for your tools using simple materials.",
-                    VideoURL = "https://example.com/videos/tool-organizer.mp4",
+                    VideoURL = "v9.mp4",
                     CategoryId = 6 // Woodworking
                 },
                 new Project
                 {
                     Id = 10,
                     Name = "Handmade Christmas Ornaments",
-                    ThumbnailURL = "https://example.com/thumbnails/christmas-ornaments.jpg",
+                    ThumbnailURL = "t10.webp",
                     Description = "Make your own unique Christmas ornaments with easy-to-follow steps.",
-                    VideoURL = "https://example.com/videos/christmas-ornaments.mp4",
+                    VideoURL = "v10.mp4",
                     CategoryId = 4 // Crafts
                 },
                 new Project
                 {
                     Id = 11,
                     Name = "Birdhouse Construction",
-                    ThumbnailURL = "https://example.com/thumbnails/birdhouse.jpg",
+                    ThumbnailURL = "t11.webp",
                     Description = "Build a cozy birdhouse for your garden.",
-                    VideoURL = "https://example.com/videos/birdhouse.mp4",
+                    VideoURL = "v11.mp4",
                     CategoryId = 6 // Woodworking
                 },
                 new Project
                 {
                     Id = 12,
                     Name = "DIY Solar Panel",
-                    ThumbnailURL = "https://example.com/thumbnails/solar-panel.jpg",
+                    ThumbnailURL = "t12.webp",
                     Description = "Create a small solar panel for your home projects.",
-                    VideoURL = "https://example.com/videos/solar-panel.mp4",
+                    VideoURL = "v12.mp4",
                     CategoryId = 3 // Electronics
                 },
                 new Project
                 {
                     Id = 13,
                     Name = "Decorative Wall Art",
-                    ThumbnailURL = "https://example.com/thumbnails/wall-art.jpg",
+                    ThumbnailURL = "t13.webp",
                     Description = "Craft beautiful wall art with simple materials.",
-                    VideoURL = "https://example.com/videos/wall-art.mp4",
+                    VideoURL = "v13.mp4",
                     CategoryId = 4 // Crafts
                 },
                 new Project
                 {
                     Id = 14,
                     Name = "Kitchen Cabinet Refacing",
-                    ThumbnailURL = "https://example.com/thumbnails/kitchen-cabinet.jpg",
+                    ThumbnailURL = "t14.webp",
                     Description = "Update your kitchen cabinets with new faces.",
-                    VideoURL = "https://example.com/videos/kitchen-cabinet.mp4",
+                    VideoURL = "v14.mp4",
                     CategoryId = 1 // Home Improvement
                 },
                 new Project
                 {
                     Id = 15,
                     Name = "DIY Compost Bin",
-                    ThumbnailURL = "https://example.com/thumbnails/compost-bin.jpg",
+                    ThumbnailURL = "t15.webp",
                     Description = "Build a compost bin for your garden.",
-                    VideoURL = "https://example.com/videos/compost-bin.mp4",
+                    VideoURL = "v15.mp4",
                     CategoryId = 2 // Gardening
                 },
                 new Project
                 {
                     Id = 16,
                     Name = "Wireless Speaker Setup",
-                    ThumbnailURL = "https://example.com/thumbnails/wireless-speaker.jpg",
+                    ThumbnailURL = "t16.webp",
                     Description = "Guide to setting up a wireless speaker system for your home.",
-                    VideoURL = "https://example.com/videos/wireless-speaker.mp4",
+                    VideoURL = "v16.mp4",
                     CategoryId = 3 // Electronics
                 },
                 new Project
                 {
                     Id = 17,
                     Name = "DIY Bookshelf",
-                    ThumbnailURL = "https://example.com/thumbnails/bookshelf.jpg",
+                    ThumbnailURL = "t17.webp",
                     Description = "Build a sturdy and stylish bookshelf for your home.",
-                    VideoURL = "https://example.com/videos/bookshelf.mp4",
+                    VideoURL = "v17.mp4",
                     CategoryId = 6 // Woodworking
                 },
                 new Project
                 {
                     Id = 18,
                     Name = "Outdoor Fire Pit",
-                    ThumbnailURL = "https://example.com/thumbnails/fire-pit.jpg",
+                    ThumbnailURL = "t18.webp",
                     Description = "Create a cozy outdoor fire pit for your backyard.",
-                    VideoURL = "https://example.com/videos/fire-pit.mp4",
+                    VideoURL = "v18.mp4",
                     CategoryId = 1 // Home Improvement
                 },
                 new Project
                 {
                     Id = 19,
                     Name = "DIY Dog House",
-                    ThumbnailURL = "https://example.com/thumbnails/dog-house.jpg",
+                    ThumbnailURL = "t19.webp",
                     Description = "Build a comfortable dog house for your furry friend.",
-                    VideoURL = "https://example.com/videos/dog-house.mp4",
+                    VideoURL = "v19.mp4",
                     CategoryId = 6 // Woodworking
                 },
                 new Project
                 {
                     Id = 20,
                     Name = "Mosaic Tile Table",
-                    ThumbnailURL = "https://example.com/thumbnails/mosaic-table.jpg",
+                    ThumbnailURL = "t20.webp",
                     Description = "Design and create a beautiful mosaic tile table.",
-                    VideoURL = "https://example.com/videos/mosaic-table.mp4",
+                    VideoURL = "v20.mp4",
                     CategoryId = 4 // Crafts
                 },
                 new Project
                 {
                     Id = 21,
                     Name = "Rainwater Harvesting System",
-                    ThumbnailURL = "https://example.com/thumbnails/rainwater-harvesting.jpg",
+                    ThumbnailURL = "t21.webp",
                     Description = "Set up a system to collect and use rainwater for your garden.",
-                    VideoURL = "https://example.com/videos/rainwater-harvesting.mp4",
+                    VideoURL = "v21.mp4",
                     CategoryId = 2 // Gardening
                 },
                 new Project
                 {
                     Id = 22,
                     Name = "DIY Power Bank",
-                    ThumbnailURL = "https://example.com/thumbnails/power-bank.jpg",
+                    ThumbnailURL = "t22.webp",
                     Description = "Build a custom power bank to charge your devices on the go.",
-                    VideoURL = "https://example.com/videos/power-bank.mp4",
+                    VideoURL = "v22.mp4",
                     CategoryId = 3 // Electronics
                 },
                 new Project
                 {
                     Id = 23,
                     Name = "Floating Shelves",
-                    ThumbnailURL = "https://example.com/thumbnails/floating-shelves.jpg",
+                    ThumbnailURL = "t23.webp",
                     Description = "Install modern floating shelves to display your decor.",
-                    VideoURL = "https://example.com/videos/floating-shelves.mp4",
+                    VideoURL = "v23.mp4",
                     CategoryId = 1 // Home Improvement
                 },
                 new Project
                 {
                     Id = 24,
                     Name = "DIY Terrarium",
-                    ThumbnailURL = "https://example.com/thumbnails/terrarium.jpg",
+                    ThumbnailURL = "t24.webp",
                     Description = "Create a miniature indoor garden with a DIY terrarium.",
-                    VideoURL = "https://example.com/videos/terrarium.mp4",
+                    VideoURL = "v24.mp4",
                     CategoryId = 2 // Gardening
                 },
                 new Project
                 {
                     Id = 25,
                     Name = "Homemade Soap",
-                    ThumbnailURL = "https://example.com/thumbnails/soap.jpg",
+                    ThumbnailURL = "t25.webp",
                     Description = "Learn how to make your own soap with natural ingredients.",
-                    VideoURL = "https://example.com/videos/soap.mp4",
+                    VideoURL = "v25.mp4",
                     CategoryId = 4 // Crafts
                 }
             );

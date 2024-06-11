@@ -10,34 +10,37 @@
 <div class="bg-light full-width py-5">
     <section class="container-1200px">
         <div class="flex"><a class="text-dark text-decoration-none bg-secondary-subtle p-2 hoverable" asp-action="Index" asp-controller="Home">Home</a> > <a class="text-dark text-decoration-none bg-secondary-subtle p-2 hoverable" asp-controller="Categories" asp-action="Details" asp-route-id="@Model.Project.CategoryId"> @Model.Project.Category.Name </a> > @Model.Project.Name</div>
-    <hr />
+        <hr />
 
-    <div>
-        <div class="px-3 d-flex justify-content-between align-items-center">
-            <h2 class="m-0">@Model?.Project.Name</h2>
-            @if (SignInManager.IsSignedIn(User))
-            {
+        <div>
+            <div class="px-3 d-flex justify-content-between align-items-center">
+                <h2 class="m-0">@Model?.Project.Name</h2>
+                @if (SignInManager.IsSignedIn(User))
+                {
                     if (ViewData["Favorited"] != null && (bool)ViewData["Favorited"])
                     {
-                        <a asp-action="Favorites" asp-route-id="@Model?.Project.Id" class="btn btn-secondary m-0">
+                        <a asp-action="Favorites" asp-route-id="@Model?.Project.Id" onclick="play()" class="btn btn-secondary m-0 favorite-btn">
                             <i class="fa-solid fa-star"></i> Remove from favorites
                         </a>
                     }
                     else
                     {
-                        <a asp-action="Favorites" asp-route-id="@Model?.Project.Id" class="btn btn-primary m-0">
+                        <a asp-action="Favorites" asp-route-id="@Model?.Project.Id" onclick="play()" class="btn btn-primary m-0 favorite-btn">
                             <i class="fa-regular fa-star"></i> Add to favorites
                         </a>
                     }
-    }
-        </div>
+                }
+            </div>
             <hr />
-        <div class="d-flex">
-                <video width="800" height="480" controls>
-                    <source src="movie.mp4" type="video/mp4">
-                </video>
+            <div class="d-flex">
+                <div class="video-container" style="width: 800px; height: 480px;">
+                    <video controls poster="~/images/@Model?.Project?.ThumbnailURL">
+                        <source src="~/videos/@Model?.Project?.VideoURL" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
 
-                <div class="p-3 bg-secondary w-100">
+                <div class="p-3 bg-secondary" style="width: 400px">
                     <h2 class="">@Model?.Project.Name</h2>
                     <hr />
                     <h4><i class="spinner-border fa-solid fa-hammer"></i> <span class="px-2">Supplies Needed</span> <i class="spinner-border fa-solid fa-hammer"></i></h4>
@@ -73,9 +76,36 @@
                         prevId = 25;
                     }
                 }
-                <a asp-action="Details" asp-route-id="@prevId" class="btn btn-primary text-light mt-3">Go Back</a> 
+                <a asp-action="Details" asp-route-id="@prevId" class="btn btn-primary text-light mt-3">Go Back</a>
                 <a asp-action="Details" asp-route-id="@nextId" class="btn btn-primary text-light ms-3 mt-3">View Next</a>
             </div>
-    </div>
-</section>
+        </div>
+    </section>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var favoriteButtons = document.querySelectorAll('.favorite-btn');
+        var audio = new Audio('@Url.Content("~/audio/ding.mp3")'); 
+
+        function playAudio() {
+            return new Promise((resolve) => {
+                audio.play();
+                audio.onended = resolve;
+            });
+        }
+
+        favoriteButtons.forEach(function (button) {
+            button.addEventListener('click', function (event) {
+                event.preventDefault(); 
+
+                var url = button.getAttribute('href');
+
+                playAudio().then(() => {
+                    window.location.href = url; 
+                });
+            });
+        });
+    });
+</script>
+

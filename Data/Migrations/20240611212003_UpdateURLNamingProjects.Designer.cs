@@ -4,6 +4,7 @@ using DIY_Site.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DIY_Site.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240611212003_UpdateURLNamingProjects")]
+    partial class UpdateURLNamingProjects
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -115,7 +117,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 1,
                             Description = "Complete guide to renovating your basement.",
                             Name = "Basement Renovation",
-                            ThumbnailURL = "t1.webp",
+                            ThumbnailURL = "t1.png",
                             VideoURL = "v1.mp4"
                         },
                         new
@@ -124,7 +126,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 2,
                             Description = "Creating a raised garden bed for your backyard.",
                             Name = "Garden Bed Installation",
-                            ThumbnailURL = "t2.webp",
+                            ThumbnailURL = "t2.png",
                             VideoURL = "v2.mp4"
                         },
                         new
@@ -133,7 +135,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 3,
                             Description = "Step-by-step guide to replacing a broken smartphone screen.",
                             Name = "Smartphone Repair",
-                            ThumbnailURL = "t4.webp",
+                            ThumbnailURL = "t4.png",
                             VideoURL = "v4.mp4"
                         },
                         new
@@ -142,7 +144,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 5,
                             Description = "Learn how to change the oil in your vehicle to save on maintenance costs.",
                             Name = "Vehicle Oil Change",
-                            ThumbnailURL = "t5.webp",
+                            ThumbnailURL = "t5.png",
                             VideoURL = "v5.mp4"
                         },
                         new
@@ -151,7 +153,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 6,
                             Description = "Craft a stylish wooden coffee table with minimal tools.",
                             Name = "Wooden Coffee Table",
-                            ThumbnailURL = "t6.webp",
+                            ThumbnailURL = "t6.png",
                             VideoURL = "v6.mp4"
                         },
                         new
@@ -160,7 +162,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 1,
                             Description = "Simple techniques to fix leaks in household plumbing.",
                             Name = "Pipe Leaks Fix",
-                            ThumbnailURL = "t7.webp",
+                            ThumbnailURL = "t7.png",
                             VideoURL = "v7.mp4"
                         },
                         new
@@ -169,7 +171,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 1,
                             Description = "Explore different techniques for painting walls to refresh your home.",
                             Name = "Wall Painting Techniques",
-                            ThumbnailURL = "t8.webp",
+                            ThumbnailURL = "t8.png",
                             VideoURL = "v8.mp4"
                         },
                         new
@@ -178,7 +180,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 6,
                             Description = "Create an organizer for your tools using simple materials.",
                             Name = "Custom Tool Organizer",
-                            ThumbnailURL = "t9.webp",
+                            ThumbnailURL = "t9.png",
                             VideoURL = "v9.mp4"
                         },
                         new
@@ -187,7 +189,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 4,
                             Description = "Make your own unique Christmas ornaments with easy-to-follow steps.",
                             Name = "Handmade Christmas Ornaments",
-                            ThumbnailURL = "t10.webp",
+                            ThumbnailURL = "t10.png",
                             VideoURL = "v10.mp4"
                         },
                         new
@@ -196,7 +198,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 6,
                             Description = "Build a cozy birdhouse for your garden.",
                             Name = "Birdhouse Construction",
-                            ThumbnailURL = "t11.webp",
+                            ThumbnailURL = "t11.png",
                             VideoURL = "v11.mp4"
                         },
                         new
@@ -205,7 +207,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 3,
                             Description = "Create a small solar panel for your home projects.",
                             Name = "DIY Solar Panel",
-                            ThumbnailURL = "t12.webp",
+                            ThumbnailURL = "t12.png",
                             VideoURL = "v12.mp4"
                         },
                         new
@@ -214,7 +216,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 4,
                             Description = "Craft beautiful wall art with simple materials.",
                             Name = "Decorative Wall Art",
-                            ThumbnailURL = "t13.webp",
+                            ThumbnailURL = "t13.png",
                             VideoURL = "v13.mp4"
                         },
                         new
@@ -223,7 +225,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 1,
                             Description = "Update your kitchen cabinets with new faces.",
                             Name = "Kitchen Cabinet Refacing",
-                            ThumbnailURL = "t14.webp",
+                            ThumbnailURL = "t14.png",
                             VideoURL = "v14.mp4"
                         },
                         new
@@ -232,7 +234,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 2,
                             Description = "Build a compost bin for your garden.",
                             Name = "DIY Compost Bin",
-                            ThumbnailURL = "t15.webp",
+                            ThumbnailURL = "t15.png",
                             VideoURL = "v15.mp4"
                         },
                         new
@@ -241,7 +243,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 3,
                             Description = "Guide to setting up a wireless speaker system for your home.",
                             Name = "Wireless Speaker Setup",
-                            ThumbnailURL = "t16.webp",
+                            ThumbnailURL = "t16.png",
                             VideoURL = "v16.mp4"
                         },
                         new
@@ -250,7 +252,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 6,
                             Description = "Build a sturdy and stylish bookshelf for your home.",
                             Name = "DIY Bookshelf",
-                            ThumbnailURL = "t17.webp",
+                            ThumbnailURL = "t17.png",
                             VideoURL = "v17.mp4"
                         },
                         new
@@ -259,7 +261,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 1,
                             Description = "Create a cozy outdoor fire pit for your backyard.",
                             Name = "Outdoor Fire Pit",
-                            ThumbnailURL = "t18.webp",
+                            ThumbnailURL = "t18.png",
                             VideoURL = "v18.mp4"
                         },
                         new
@@ -268,7 +270,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 6,
                             Description = "Build a comfortable dog house for your furry friend.",
                             Name = "DIY Dog House",
-                            ThumbnailURL = "t19.webp",
+                            ThumbnailURL = "t19.png",
                             VideoURL = "v19.mp4"
                         },
                         new
@@ -277,7 +279,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 4,
                             Description = "Design and create a beautiful mosaic tile table.",
                             Name = "Mosaic Tile Table",
-                            ThumbnailURL = "t20.webp",
+                            ThumbnailURL = "t20.png",
                             VideoURL = "v20.mp4"
                         },
                         new
@@ -286,7 +288,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 2,
                             Description = "Set up a system to collect and use rainwater for your garden.",
                             Name = "Rainwater Harvesting System",
-                            ThumbnailURL = "t21.webp",
+                            ThumbnailURL = "t21.png",
                             VideoURL = "v21.mp4"
                         },
                         new
@@ -295,7 +297,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 3,
                             Description = "Build a custom power bank to charge your devices on the go.",
                             Name = "DIY Power Bank",
-                            ThumbnailURL = "t22.webp",
+                            ThumbnailURL = "t22.png",
                             VideoURL = "v22.mp4"
                         },
                         new
@@ -304,7 +306,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 1,
                             Description = "Install modern floating shelves to display your decor.",
                             Name = "Floating Shelves",
-                            ThumbnailURL = "t23.webp",
+                            ThumbnailURL = "t23.png",
                             VideoURL = "v23.mp4"
                         },
                         new
@@ -313,7 +315,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 2,
                             Description = "Create a miniature indoor garden with a DIY terrarium.",
                             Name = "DIY Terrarium",
-                            ThumbnailURL = "t24.webp",
+                            ThumbnailURL = "t24.png",
                             VideoURL = "v24.mp4"
                         },
                         new
@@ -322,7 +324,7 @@ namespace DIY_Site.Data.Migrations
                             CategoryId = 4,
                             Description = "Learn how to make your own soap with natural ingredients.",
                             Name = "Homemade Soap",
-                            ThumbnailURL = "t25.webp",
+                            ThumbnailURL = "t25.png",
                             VideoURL = "v25.mp4"
                         });
                 });
