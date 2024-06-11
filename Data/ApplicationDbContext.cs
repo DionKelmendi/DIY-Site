@@ -9,6 +9,7 @@ namespace DIY_Site.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Supply> Supplies { get; set; }
+        public DbSet<UserFavorites> UserFavorites { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
