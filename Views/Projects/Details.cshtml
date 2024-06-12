@@ -19,13 +19,19 @@
                 {
                     if (ViewData["Favorited"] != null && (bool)ViewData["Favorited"])
                     {
-                        <a asp-action="Favorites" asp-route-id="@Model?.Project.Id" onclick="play()" class="btn btn-secondary m-0 favorite-btn">
+                        <a asp-action="Favorites" asp-route-id="@Model?.Project.Id" class="btn btn-secondary m-0 favorite-btn">
+                            <div id="spinner-div" class="spinner-grow spinner-grow-sm d-none" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
                             <i class="fa-solid fa-star"></i> Remove from favorites
                         </a>
                     }
                     else
                     {
-                        <a asp-action="Favorites" asp-route-id="@Model?.Project.Id" onclick="play()" class="btn btn-primary m-0 favorite-btn">
+                        <a asp-action="Favorites" asp-route-id="@Model?.Project.Id" class="btn btn-primary m-0 favorite-btn">
+                            <div id="spinner-div" class="spinner-grow spinner-grow-sm d-none" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
                             <i class="fa-regular fa-star"></i> Add to favorites
                         </a>
                     }
@@ -89,6 +95,13 @@
         var audio = new Audio('@Url.Content("~/audio/ding.mp3")'); 
 
         function playAudio() {
+
+            var spinner = document.getElementById('spinner-div');
+            spinner.classList.remove("d-none");
+
+            var star = document.querySelector('.fa-star');
+            star.classList.add("d-none");
+
             return new Promise((resolve) => {
                 audio.play();
                 audio.onended = resolve;
